@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assesstment 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/script.js"></script>
+    <!--Add a script with a function in the head section that will change the text in the paragraph when it is called by a button, and add the button to call it-->
+    <script>
+        function myFunction2() {
+            document.getElementById("one").innerHTML = "In nature, nothing is perfect and everything is perfect.";
+        }
+    </script>
+
+</head>
+
+<body onload="add_Text()">
+    <header>
+        <h1>Sunrise / Moon / Stars</h1>
+    </header>
+    <main>
+
+        <img src="images/sunrise.jpeg" alt="sunrise" id="sky" class="center">
+        <div class="buttons">
+            <button onclick="document.getElementById('sky').src='images/sunset.jpeg'">Click me to see the sunset</button>
+            <button onclick="document.getElementById('sky').src='images/moon.jpeg'">Click me to see the moon</button>
+            <button onclick="document.getElementById('sky').src='images/bluesky.jpeg'">Click me to see the sky</button>
+        </div>
+        <!--Add JavaScript in the body of the page that will add text to the paragraph when the page loads-->
+        <p id="one">Never forget to see the beauty of nature!</p>
+        <script>
+            function add_Text() {
+                document.getElementById("one").textContent += "Say more about nature...!";
+            }
+        </script>
+
+
+
+
+
+
+
+
+        <div class="buttons">
+            <!--Add an external JavaScript file that will change the text in the paragraph when it is called by a button, and add the button to call it-->
+            <button type="button" onclick="myFunction1()">Change externally</button>
+
+            <button type="button" onclick="myFunction2()">Change in head</button>
+        </div>
+
+
+        <!--Add a button and a script to change the color of the text in the paragraph-->
+        <p id="demo">
+            This is the paragraph's css!
+        </p>
+        <div class="buttons">
+            <button type="button" onclick='document.getElementById("demo").style.color = "red"; '>Change color</button>
+        </div>
+
+
+        <!--Add show/hide buttons with the associated scripts to show and hide the image -->
+        <img src="images/stars.jpeg" alt="star" id="myImg" class="center">
+        <div class="buttons">
+            <button onclick="document.getElementById('myImg').style.display = 'block' ">show </button>
+            <button onclick="document.getElementById('myImg').style.display = 'none' ">hide</button>
+        </div>
+        <!--Add show/hide buttons with the associated scripts to show and hide the image-->
+        <img id="pic" src="images/bluesky.jpeg" class="center">
+        <div class="buttons">
+            <button type="button" onclick='document.getElementById("pic").style.width = "30%"; '>Change width</button>
+            <button type="button" onclick='document.getElementById("pic").style.width = "40%"; '>Put it back</button>
+        </div>
+
+
+
+
+
+</body>
+
+</html>
